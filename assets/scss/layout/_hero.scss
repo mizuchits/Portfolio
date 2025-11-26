@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as var;
+
+.hero {
+    text-align: center;
+    padding: 25vh 0;
+
+    div {
+        height: 100%;
+
+        h1 {
+            font-family: var.$title-font;
+        }
+    }
+
+}

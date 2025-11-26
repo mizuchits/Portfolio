@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as var;
+
+#about {
+    margin-right: 40%;
+    text-align: center;
+    background-color: var.$secondary-color;
+    padding: 2rem;
+
+    div {
+        padding: 0;
+
+        div {}
+    }
+
+}

@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@font-face {
+  font-family: "roboto-slab";
+  src: url("../fonts/Roboto_Slab/static/RobotoSlab-Light.ttf");
+}
+@font-face {
+  font-family: "figtree-medium";
+  src: url("../fonts/Figtree/static/Figtree-Medium.ttf");
+}
+body {
+  margin: 0;
+  font-family: "figtree-medium";
+  background-color: #003459;
+  color: white;
+}
+
+header nav {
+  position: relative;
+}
+header nav a {
+  position: absolute;
+  left: 80%;
+}
+
+.hero {
+  text-align: center;
+  padding: 25vh 0;
+}
+.hero div {
+  height: 100%;
+}
+.hero div h1 {
+  font-family: "roboto-slab";
+}
+
+#about {
+  margin-right: 40%;
+  text-align: center;
+  background-color: #00171F;
+  padding: 2rem;
+}
+#about div {
+  padding: 0;
+}
+#skills {
+  margin-top: 10rem;
+  margin-left: 40%;
+  text-align: center;
+  background-color: #00171F;
+  padding: 2rem;
+}
+#skills .skill-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+}
+#skills .skill-container .skill-card {
+  display: flex;
+  background-color: #003459;
+  padding: 0 0.2rem;
+  max-width: 8rem;
+  max-height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+#skills .skill-container .skill-card svg {
+  height: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
