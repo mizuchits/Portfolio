@@ -2,7 +2,7 @@
 
 .skill-card {
     display: flex;
-    background-color: var.$primary-color;
+    background-color: var.$white;
     padding: 0 0.2rem;
     max-height: 50px;
 
@@ -15,9 +15,10 @@
             height: 30px;
         }
 
-        p {
-            color: var.$text-color;
-        }
+    }
+
+    p {
+        color: var.$primary-color;
     }
 
 }

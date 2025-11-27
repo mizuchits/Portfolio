@@ -15,7 +15,7 @@
 }
 .skill-card {
   display: flex;
-  background-color: #0F1C2E;
+  background-color: aliceblue;
   padding: 0 0.2rem;
   max-height: 50px;
   align-items: center;
@@ -25,8 +25,8 @@
 .skill-card div svg {
   height: 30px;
 }
-.skill-card div p {
-  color: white;
+.skill-card p {
+  color: #0F1C2E;
 }
 
 body {
@@ -104,7 +104,7 @@ header #slide_menu {
   position: fixed;
   height: 50%;
   width: 100%;
-  background-color: #1E3A5F;
+  background-color: #4ECA8A;
   z-index: 550;
   top: 0px;
   right: 0px;
@@ -177,7 +177,7 @@ header #slide_menu ul li:hover:before {
 #about {
   margin-right: 40%;
   text-align: center;
-  background-color: #1E3A5F;
+  background-color: #4ECA8A;
   padding: 2rem;
 }
 #about div {
@@ -188,7 +188,7 @@ header #slide_menu ul li:hover:before {
   margin-top: 10rem;
   margin-left: 40%;
   text-align: center;
-  background-color: #1E3A5F;
+  background-color: #4ECA8A;
   padding: 2rem;
 }
 #skills .skill-container {
@@ -291,12 +291,12 @@ header #slide_menu ul li:hover:before {
   opacity: 1;
 }
 #projet .container .projet-container .hover-test {
-  background-color: #1E3A5F;
+  background-color: #4ECA8A;
 }
 
 footer {
   margin-top: 20px;
-  background-color: #1E3A5F;
+  background-color: #4ECA8A;
   text-align: center;
 }
 footer p {
@@ -343,7 +343,7 @@ footer .container nav ul li div svg {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #1E3A5F;
+  background-color: #4ECA8A;
   color: aliceblue;
   cursor: pointer;
   padding: 15px;
