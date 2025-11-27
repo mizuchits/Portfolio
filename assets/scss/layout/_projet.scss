@@ -4,12 +4,20 @@
     .container {
         text-align: center;
         margin-top: 10rem;
+        padding: 0;
 
         .projet-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 20px;
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                margin: 0 10px;
+            }
+
 
             .projet-content {
                 visibility: hidden;
@@ -79,7 +87,7 @@
                     transform: scale(1.05);
 
                     &::before {
-                        background: rgba(0, 0, 0, 0.6); // éclaircir au hover
+                        background: rgba(0, 0, 0, 0.6);
                     }
 
                     .projet-content {
@@ -93,7 +101,8 @@
                 background-color: var.$secondary-color;
             }
 
-
         }
+
+
     }
 }
