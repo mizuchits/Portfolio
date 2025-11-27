@@ -16,11 +16,11 @@
 .skill-card {
   display: flex;
   background-color: aliceblue;
-  padding: 0 0.2rem;
+  padding: 2px;
   max-height: 50px;
   align-items: center;
-  justify-content: space-around;
   gap: 10px;
+  border-radius: 5px;
 }
 .skill-card div svg {
   height: 30px;
