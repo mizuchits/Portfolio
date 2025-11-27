@@ -12,20 +12,6 @@
         grid-template-columns: repeat(6, 1fr);
         gap: 25px;
 
-        .skill-card {
-            display: flex;
-            background-color: var.$primary-color;
-            padding: 0 0.2rem;
-            max-width: 8rem;
-            max-height: 50px;
 
-            align-items: center;
-            justify-content: space-around;
-            gap: 10px;
-
-            svg {
-                height: 30px;
-            }
-        }
     }
 }

@@ -1,0 +1,99 @@
+@use '../abstracts/variables' as var;
+
+#projet {
+    .container {
+        text-align: center;
+        margin-top: 10rem;
+
+        .projet-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+
+            .projet-content {
+                visibility: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .projet-method {
+                    display: flex;
+                    gap: 10px;
+                }
+
+            }
+
+            .projet-aucazein {
+                background-image: url(../img/projet-aucazein.png);
+            }
+
+            .projet-baldure-gate {
+                background-image: url(../img/projet-baldure-gate.png);
+            }
+
+            .projet-clair-obscure {
+                background-image: url(../img/projet-clair-obscure.png);
+            }
+
+            .projet-espace-reno {
+                background-image: url(../img/projet-espace-reno.png);
+            }
+
+            .projet-instadog {
+                background-image: url(../img/projet-instadog.png);
+            }
+
+            .projet-magic {
+                background-image: url(../img/projet-magic.png);
+            }
+
+            .projet-card {
+                position: relative;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                min-height: 250px;
+                width: 100%;
+                overflow: hidden;
+                cursor: pointer;
+                transition: 0.4s all ease;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    transition: 0.4s all ease;
+                }
+
+                .projet-content {
+                    position: relative;
+                    z-index: 2;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s all ease;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+
+                    &::before {
+                        background: rgba(0, 0, 0, 0.6); // éclaircir au hover
+                    }
+
+                    .projet-content {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .hover-test {
+                background-color: var.$secondary-color;
+            }
+
+
+        }
+    }
+}

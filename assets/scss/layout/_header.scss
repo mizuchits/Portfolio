@@ -1,10 +1,128 @@
-header {
-    nav {
-        position: relative;
+@use '../abstracts/variables' as var;
 
-        a {
+header {
+    position: fixed;
+
+    .hamburger-menu {
+
+        $self: &;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        cursor: pointer;
+        z-index: 9999999;
+
+        &__line {
+            height: 3px;
+            background-color: var.$white;
+            width: 100%;
+            display: block;
+            transition: var.$burgerTransition;
+        }
+
+        &:before {
+            content: '';
             position: absolute;
-            left: 80%;
+            width: 100%;
+            height: 3px;
+            background-color: var.$white;
+            top: 5px;
+            left: 0;
+            transition: var.$burgerTransition;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: var.$white;
+            left: 0;
+            bottom: 5px;
+            transition: var.$burgerTransition;
+        }
+
+        &--active {
+            &:after {
+                transform: rotate(-320deg);
+                bottom: 13px;
+            }
+
+            &:before {
+                transform: rotate(320deg);
+                top: 15px;
+            }
+
+            #{$self}__line {
+                opacity: 0;
+                width: 0;
+            }
+        }
+    }
+
+    #slide_menu {
+        position: fixed;
+        height: 50%;
+        width: 25%;
+        background-color: var.$secondary-color;
+        z-index: 550;
+        top: 0px;
+        right: 0px;
+        display: none;
+
+
+        ul {
+            flex-wrap: nowrap;
+            height: 100vh;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            li {
+                display: block;
+                font-size: 70px;
+                margin: 50px;
+                cursor: pointer;
+                z-index: 30;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 4px;
+                    bottom: -8px;
+                    left: 0;
+                    background-color: black;
+                    visibility: visible;
+                    -webkit-transform: scaleX(0);
+                    -moz-transform: scaleX(0);
+                    -o-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: all 0.3s ease-in-out 0s;
+                    -moz-transition: all 0.3s ease-in-out 0s;
+                    -o-transition: all 0.3s ease-in-out 0s;
+                    transition: all 0.3s ease-in-out 0s;
+                }
+
+                &:hover:before {
+                    visibility: visible;
+                    -webkit-transform: scaleX(1);
+                    -moz-transform: scaleX(1);
+                    -o-transform: scaleX(1);
+                    transform: scaleX(1);
+                }
+            }
         }
     }
 }

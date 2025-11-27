@@ -5,4 +5,13 @@ body {
     font-family: var.$main-font;
     background-color: var.$primary-color;
     color: var.$text-color;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }

@@ -5,6 +5,7 @@
 
 // components
 
+@use "components/skill-card";
 
 // layout
 
@@ -14,3 +15,6 @@
 @use "layout/hero";
 @use "layout/about";
 @use "layout/skills";
+@use "layout/projet";
+@use "layout/footer";
+@use "layout/toTop";

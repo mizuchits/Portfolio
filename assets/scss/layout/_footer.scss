@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as var;
+
+footer {
+    margin-top: 20px;
+    background-color: var.$secondary-color;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+
+    .container {
+        nav {
+            border-bottom: 1px solid white;
+            padding: 30px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                li {
+                    margin: 10px 0;
+
+                    div {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+                        svg {
+                            max-width: 10rem;
+                            padding: 10px;
+                            height: 40px;
+                            color: var.$color-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
