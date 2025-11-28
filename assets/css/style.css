@@ -115,7 +115,7 @@ header div .hamburger-menu--active header div .hamburger-menu__line {
 }
 header #slide_menu {
   position: fixed;
-  height: 40%;
+  height: 60%;
   width: 100%;
   background-color: #4ECA8A;
   z-index: 550;
