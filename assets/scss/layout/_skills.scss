@@ -22,7 +22,7 @@
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 425px) {
         .skill-container {
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(6, 1fr);

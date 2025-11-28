@@ -216,7 +216,7 @@ header #slide_menu ul li:hover:before {
     grid-template-rows: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   #skills .skill-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -349,7 +349,7 @@ footer .container nav ul {
   align-items: center;
   gap: 10px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   footer .container nav ul {
     flex-direction: column;
   }
