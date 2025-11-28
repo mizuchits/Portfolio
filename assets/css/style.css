@@ -126,7 +126,7 @@ header #slide_menu {
 }
 @media screen and (max-width: 425px) {
   header #slide_menu {
-    height: 40%;
+    height: 50%;
   }
 }
 header #slide_menu ul {
