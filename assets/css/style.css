@@ -124,7 +124,7 @@ header #slide_menu {
     opacity: 1;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   header #slide_menu {
     height: 40%;
   }
@@ -146,7 +146,7 @@ header #slide_menu ul li {
   z-index: 30;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   header #slide_menu ul li {
     font-size: 30px;
   }
