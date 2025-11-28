@@ -44,12 +44,15 @@ a {
   text-decoration: none;
 }
 
-header {
+header div {
+  display: flex;
   width: 100%;
+  justify-content: flex-end;
 }
-header .hamburger-menu {
-  width: 32px;
-  height: 32px;
+header div .hamburger-menu {
+  margin-right: 25px;
+  width: 40px;
+  height: 40px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -61,14 +64,14 @@ header .hamburger-menu {
   cursor: pointer;
   z-index: 9999999;
 }
-header .hamburger-menu__line {
+header div .hamburger-menu__line {
   height: 3px;
   background-color: aliceblue;
   width: 100%;
   display: block;
   transition: all 300ms ease-in-out;
 }
-header .hamburger-menu:before {
+header div .hamburger-menu:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -78,7 +81,7 @@ header .hamburger-menu:before {
   left: 0;
   transition: all 300ms ease-in-out;
 }
-header .hamburger-menu:after {
+header div .hamburger-menu:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -88,15 +91,15 @@ header .hamburger-menu:after {
   bottom: 5px;
   transition: all 300ms ease-in-out;
 }
-header .hamburger-menu--active:after {
+header div .hamburger-menu--active:after {
   transform: rotate(-320deg);
   bottom: 13px;
 }
-header .hamburger-menu--active:before {
+header div .hamburger-menu--active:before {
   transform: rotate(320deg);
   top: 15px;
 }
-header .hamburger-menu--active header .hamburger-menu__line {
+header div .hamburger-menu--active header div .hamburger-menu__line {
   opacity: 0;
   width: 0;
 }
@@ -109,6 +112,17 @@ header #slide_menu {
   top: 0px;
   right: 0px;
   display: none;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 375px) {
   header #slide_menu {
@@ -134,7 +148,7 @@ header #slide_menu ul li {
 }
 @media screen and (max-width: 375px) {
   header #slide_menu ul li {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 header #slide_menu ul li:before {
@@ -165,10 +179,10 @@ header #slide_menu ul li:hover:before {
 
 .hero {
   text-align: center;
-  padding: 25vh 0;
-}
-.hero div {
-  height: 100%;
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
 }
 .hero div h1 {
   font-family: "roboto-slab";
@@ -214,6 +228,18 @@ header #slide_menu ul li:hover:before {
   margin-top: 10rem;
   padding: 0;
 }
+#projet .container .see-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#projet .container .see-all div {
+  padding: 15px;
+}
+#projet .container .see-all div a {
+  color: #0F1C2E;
+}
 #projet .container .projet-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -233,6 +259,13 @@ header #slide_menu ul li:hover:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
+}
+#projet .container .projet-container .projet-content .see-more {
+  padding: 10px;
+}
+#projet .container .projet-container .projet-content .see-more a {
+  color: #0F1C2E;
 }
 #projet .container .projet-container .projet-content .projet-method {
   display: flex;
@@ -281,7 +314,8 @@ header #slide_menu ul li:hover:before {
   transition: 0.3s all ease;
 }
 #projet .container .projet-container .projet-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.3);
+  z-index: 300;
 }
 #projet .container .projet-container .projet-card:hover::before {
   background: rgba(0, 0, 0, 0.6);
@@ -349,6 +383,8 @@ footer .container nav ul li div svg {
   padding: 15px;
   border-radius: 10px;
   font-size: 2rem;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.308);
+  transition: all 0.3s ease-in-out;
 }
 .toTop #myBtn:hover {
   background-color: #555;

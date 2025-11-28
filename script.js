@@ -8,6 +8,7 @@ const toggleMenu = () => {
         slide_menu.style.display = "none"
     } else {
         slide_menu.style.display = "block"
+
     }
 }
 

@@ -1,70 +1,77 @@
 @use '../abstracts/variables' as var;
 
 header {
-    width: 100%;
 
-    .hamburger-menu {
-        $self: &;
-        width: 32px;
-        height: 32px;
-        padding: 0;
+    div {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        border: 0;
-        outline: 0;
-        background: transparent;
-        cursor: pointer;
-        z-index: 9999999;
+        width: 100%;
+        justify-content: flex-end;
 
-        &__line {
-            height: 3px;
-            background-color: var.$white;
-            width: 100%;
-            display: block;
-            transition: var.$burgerTransition;
-        }
+        .hamburger-menu {
+            margin-right: 25px;
+            $self: &;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            cursor: pointer;
+            z-index: 9999999;
 
-        &:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background-color: var.$white;
-            top: 5px;
-            left: 0;
-            transition: var.$burgerTransition;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background-color: var.$white;
-            left: 0;
-            bottom: 5px;
-            transition: var.$burgerTransition;
-        }
-
-        &--active {
-            &:after {
-                transform: rotate(-320deg);
-                bottom: 13px;
+            &__line {
+                height: 3px;
+                background-color: var.$white;
+                width: 100%;
+                display: block;
+                transition: var.$burgerTransition;
             }
 
             &:before {
-                transform: rotate(320deg);
-                top: 15px;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: var.$white;
+                top: 5px;
+                left: 0;
+                transition: var.$burgerTransition;
             }
 
-            #{$self}__line {
-                opacity: 0;
-                width: 0;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: var.$white;
+                left: 0;
+                bottom: 5px;
+                transition: var.$burgerTransition;
+            }
+
+            &--active {
+                &:after {
+                    transform: rotate(-320deg);
+                    bottom: 13px;
+                }
+
+                &:before {
+                    transform: rotate(320deg);
+                    top: 15px;
+                }
+
+                #{$self}__line {
+                    opacity: 0;
+                    width: 0;
+                }
             }
         }
     }
+
 
     #slide_menu {
         position: fixed;
@@ -75,6 +82,20 @@ header {
         top: 0px;
         right: 0px;
         display: none;
+        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+        @keyframes slide-in-top {
+            0% {
+                transform: translateY(-1000px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
 
         @media screen and (max-width: 375px) {
             height: 40%;
@@ -100,7 +121,7 @@ header {
                 position: relative;
 
                 @media screen and (max-width: 375px) {
-                    font-size: 40px;
+                    font-size: 30px;
                 }
 
                 &:before {

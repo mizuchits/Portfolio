@@ -6,6 +6,21 @@
         margin-top: 10rem;
         padding: 0;
 
+        .see-all {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+            div {
+                padding: 15px;
+
+                a {
+                    color: var.$primary-color;
+                }
+            }
+        }
+
         .projet-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -25,6 +40,16 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                gap: 40px;
+
+                .see-more {
+                    padding: 10px;
+
+                    a {
+                        color: var.$primary-color;
+                    }
+
+                }
 
                 .projet-method {
                     display: flex;
@@ -84,7 +109,8 @@
                 }
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.30);
+                    z-index: 300;
 
                     &::before {
                         background: rgba(0, 0, 0, 0.6);
