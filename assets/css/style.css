@@ -251,8 +251,17 @@ header #slide_menu ul li {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+  overflow: hidden;
+  padding: 40px 0;
 }
 @media screen and (max-width: 768px) {
+  #projet .container .projet-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 375px) {
   #projet .container .projet-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
