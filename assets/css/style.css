@@ -228,8 +228,9 @@ header #slide_menu ul li {
   text-align: center;
   margin-top: 10rem;
   padding: 0;
+  z-index: 99999999999999;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 375px) {
   #projet .container {
     overflow: hidden;
   }
@@ -251,13 +252,13 @@ header #slide_menu ul li {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
-  overflow: hidden;
   padding: 40px 0;
 }
 @media screen and (max-width: 768px) {
   #projet .container .projet-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
     margin: 0 10px;
   }
 }
